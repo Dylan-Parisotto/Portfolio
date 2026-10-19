@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dylan Parisotto | Backend Developer</title>
+  <meta name="description" content="Portfolio of Dylan Parisotto, a student developer building TypeScript, Express and MongoDB APIs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Dylan Parisotto, back to top">
+        <span class="brand-mark" aria-hidden="true">DP</span>
+        <span class="brand-name">Dylan Parisotto</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero: who I am + a working replay of my API -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-intro">
+          <h1>I build the part of the app you don't see.</h1>
+          <p class="lede">I'm Dylan Parisotto, a student developer writing APIs in TypeScript, Express and MongoDB. Send a request to my Issue Tracker API right on this page. Every response matches what the real API returned in testing.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Read the case study</a>
+            <a class="btn btn-ghost" href="https://github.com/Dylan-Parisotto" target="_blank" rel="noopener">GitHub profile</a>
+          </div>
+        </div>
+
+        <div class="console" aria-labelledby="console-title">
+          <div class="console-bar">
+            <p id="console-title" class="console-title">Issue Tracker API</p>
+            <p class="console-host">localhost:3000</p>
+          </div>
+          <div class="console-requests" role="group" aria-label="Choose a request to send">
+            <button type="button" class="req is-active" data-req="create"><span class="verb verb-post">POST</span> Create an issue</button>
+            <button type="button" class="req" data-req="missing"><span class="verb verb-post">POST</span> Leave out the title</button>
+            <button type="button" class="req" data-req="priority"><span class="verb verb-post">POST</span> Use a bad priority</button>
+            <button type="button" class="req" data-req="status"><span class="verb verb-patch">PATCH</span> Start work on it</button>
+            <button type="button" class="req" data-req="comment"><span class="verb verb-post">POST</span> Add a comment</button>
+          </div>
+          <div class="console-body">
+            <p class="console-label">Request</p>
+            <pre class="code" id="console-request"></pre>
+            <p class="console-label">Response <span class="status-pill" id="console-status"></span></p>
+            <pre class="code" id="console-response" aria-live="polite"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <figure class="headshot">
+          <img src="headshot.jpg" alt="Headshot of Dylan Parisotto" width="480" height="560">
+          <figcaption class="headshot-fallback" aria-hidden="true"><span class="fill">FILL IN HERE - headshot photo (save it as headshot.jpg next to index.html)</span></figcaption>
+        </figure>
+        <div class="about-text">
+          <h2 id="about-title">About me</h2>
+          <p>I'm Dylan Parisotto, an Applications and Web Development student at Ranken Technical College, where I'm learning to build the back end of web applications. Most of my work so far lives on the server: APIs that take a request, check it carefully, store the data, and send back an answer the front end can trust.</p>
+          <p>This semester I started with TypeScript fundamentals, then moved on to building REST APIs with Express, writing MongoDB queries and schemas, and connecting the two with the official Node.js driver. My biggest project is an Issue Tracker API that I built up over three labs, adding one feature at a time and testing each one before moving on. I keep all of my coursework in one Git repository so you can see how my code has grown.</p>
+          <p>I have always had a love for websites and games, and wanted to see what makes them tick. Now I am able to make my own websites from scratch.</p>
+          <p>Next I'm learning React so I can build the front end that talks to my APIs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 id="skills-title">Skills</h2>
+        <p class="section-intro">Each skill is listed with where I've used it, so you can go and check the code.</p>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <dl>
+              <dt>TypeScript</dt>
+              <dd>Every lab and test this semester, with strict typing and <code>tsc --noEmit</code> checks</dd>
+              <dt>JavaScript</dt>
+              <dd>Node.js runtime and the interactive parts of this site</dd>
+              <dt>HTML &amp; CSS</dt>
+              <dd>This portfolio, written by hand with no framework</dd>
+            </dl>
+          </div>
+          <div class="skill-group">
+            <h3>Back end</h3>
+            <dl>
+              <dt>Express</dt>
+              <dd>REST routes, routers, middleware and controllers in the Issue Tracker and a Bookmarks API</dd>
+              <dt>MongoDB</dt>
+              <dd>Queries, schema design and updates with <code>$set</code>, <code>$push</code>, <code>$pull</code> and array filters</dd>
+              <dt>Zod</dt>
+              <dd>Request validation that returns clear 400 errors</dd>
+            </dl>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <dl>
+              <dt>Git &amp; GitHub</dt>
+              <dd>One repository holding every lab, test and project</dd>
+              <dt>Node.js &amp; npm</dt>
+              <dd>Project setup, packages, and running servers with tsx</dd>
+              <dt>VS Code, ESLint, Prettier</dt>
+              <dd>Linting and auto-formatting on save</dd>
+            </dl>
+          </div>
+        </div>
+        <p class="learning-next"><strong>Learning next:</strong> React</p>
+      </div>
+    </section>
+
+    <!-- Projects: Issue Tracker case study -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 id="projects-title">Projects</h2>
+
+        <article class="case" aria-labelledby="case-title">
+          <header class="case-head">
+            <p class="case-kicker">Case study</p>
+            <h3 id="case-title">Issue Tracker API</h3>
+            <p class="case-summary">A REST API for logging bugs, assigning them to developers and tracking them until they're fixed. I built it over three labs, adding one feature at a time.</p>
+            <ul class="case-tags" aria-label="Tech stack">
+              <li>TypeScript</li><li>Express 5</li><li>MongoDB</li><li>Zod</li><li>Node.js</li>
+            </ul>
+          </header>
+
+          <div class="case-body">
+            <section class="case-part" aria-labelledby="problem-title">
+              <h4 id="problem-title">Problem</h4>
+              <p>Software teams need one place to report bugs and follow each one until it's fixed. Without a tracker, bug reports get lost in chat messages, nobody knows who's working on what, and there's no record of whether a fix was ever tested. The API needed to accept bug reports, reject incomplete or invalid ones, and keep each issue's whole history (status, comments, test results) together in one record.</p>
+            </section>
+
+            <section class="case-part" aria-labelledby="role-title">
+              <h4 id="role-title">My role</h4>
+              <p>I built the whole API myself as a course project:</p>
+              <ul>
+                <li>Designed the issue data model in TypeScript: author, assignee, status, classification, comments and test cases.</li>
+                <li>Wrote all 10 Express routes and their controllers.</li>
+                <li>Built a reusable validation middleware that runs any Zod schema and returns field-by-field errors.</li>
+                <li>Moved storage from in-memory arrays to MongoDB in the final lab.</li>
+                <li>Tested every route by hand and recorded the results.</li>
+              </ul>
+            </section>
+
+            <section class="case-part" aria-labelledby="built-title">
+              <h4 id="built-title">What I built</h4>
+              <p>A layered Express app: <strong>routes</strong> map URLs to <strong>controllers</strong>, <strong>middleware</strong> validates requests and attaches the current user, and a <strong>data</strong> layer talks to MongoDB through the official Node.js driver.</p>
+              <div class="table-scroll">
+                <table class="endpoints">
+                  <caption class="visually-hidden">Issue Tracker endpoints</caption>
+                  <thead>
+                    <tr><th scope="col">Method</th><th scope="col">Endpoint</th><th scope="col">What it does</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><span class="verb verb-post">POST</span></td><td><code>/issues</code></td><td>Report a new bug</td></tr>
+                    <tr><td><span class="verb verb-get">GET</span></td><td><code>/issues/:id</code></td><td>Look up one issue</td></tr>
+                    <tr><td><span class="verb verb-patch">PATCH</span></td><td><code>/issues/:id</code></td><td>Edit the title, description, steps or priority</td></tr>
+                    <tr><td><span class="verb verb-patch">PATCH</span></td><td><code>/issues/:id/status</code></td><td>Move it to open, in progress or closed</td></tr>
+                    <tr><td><span class="verb verb-patch">PATCH</span></td><td><code>/issues/:id/classify</code></td><td>Mark it approved, unapproved or duplicate</td></tr>
+                    <tr><td><span class="verb verb-patch">PATCH</span></td><td><code>/issues/:id/assign</code></td><td>Assign it to a developer</td></tr>
+                    <tr><td><span class="verb verb-post">POST</span></td><td><code>/issues/:id/comments</code></td><td>Add a comment</td></tr>
+                    <tr><td><span class="verb verb-delete">DELETE</span></td><td><code>/issues/:id/comments/:commentId</code></td><td>Remove one comment</td></tr>
+                    <tr><td><span class="verb verb-post">POST</span></td><td><code>/issues/:id/test-cases</code></td><td>Add a test case</td></tr>
+                    <tr><td><span class="verb verb-patch">PATCH</span></td><td><code>/issues/:id/test-cases/:testCaseId</code></td><td>Mark a test case passed or failed</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Two design decisions matter most here. First, the server sets the author from the signed-in user and ignores any author the client sends, so nobody can file a bug under someone else's name. Second, comments and test cases are updated in place with MongoDB's <code>$push</code>, <code>$pull</code> and array filters, so changing one never touches the others.</p>
+            </section>
+
+            <section class="case-part" aria-labelledby="improve-title">
+              <h4 id="improve-title">What I'd improve</h4>
+              <ul>
+                <li><strong>Real sign-in.</strong> The current user is a placeholder. I'd add accounts and log-in so every action is tied to a real person.</li>
+                <li><strong>Automated tests.</strong> I tested by hand. Next time I'd write tests that run on every change.</li>
+                <li><strong>Search and filters.</strong> Add a <code>GET /issues</code> list with filters for status, priority and assignee.</li>
+                <li><strong>A front end.</strong> Build a React interface so non-developers can use it, once I've learned React in Module 6.</li>
+                <li><strong>Time log.</strong> The data model already has a time log field; I'd finish the routes for logging hours.</li>
+              </ul>
+            </section>
+
+            <section class="case-part proof" aria-labelledby="proof-title">
+              <h4 id="proof-title">Proof of work</h4>
+              <p>The API runs on a local server with a MongoDB database, so it isn't hosted online. Here's the evidence instead:</p>
+              <ul class="proof-links">
+                <li><a href="https://github.com/Dylan-Parisotto/Dylan_Parisotto/tree/main/labs/module4/lab%2004-03" target="_blank" rel="noopener">Source code on GitHub</a></li>
+                <li><a href="#top">Replay the API at the top of this page</a></li>
+              </ul>
+              <details class="test-log">
+                <summary>Test results from my final lab (15 checks passed)</summary>
+                <ul class="checks">
+                  <li>Valid <code>POST /issues</code> returned 201</li>
+                  <li>Missing fields returned 400 with ValidationFailed</li>
+                  <li>Invalid priority values were rejected</li>
+                  <li>Client-supplied author values were ignored</li>
+                  <li>Created issues used the server-side author</li>
+                  <li><code>POST /issues/:id/comments</code> returned 201</li>
+                  <li>New comments used the current user's ID and name</li>
+                  <li>Empty comments returned 400 with ValidationFailed</li>
+                  <li><code>DELETE /issues/:id/comments/:commentId</code> returned 200</li>
+                  <li>Deleting one comment left the others unchanged</li>
+                  <li><code>POST /issues/:id/test-cases</code> returned 201</li>
+                  <li>New test cases started as not passed</li>
+                  <li><code>PATCH /issues/:id/test-cases/:testCaseId</code> returned 200</li>
+                  <li>Updating one test case left the others unchanged</li>
+                  <li><code>npm run typecheck</code> passed</li>
+                </ul>
+              </details>
+            </section>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Contact</h2>
+        <p class="section-intro">Have an internship, a project or a question? I'd like to hear about it.</p>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-kind">Email</span>
+            <a href="mailto:dylanparisotto2@gmail.com">dylanparisotto2@gmail.com</a>
+            <button type="button" class="copy-btn" data-copy="dylanparisotto2@gmail.com">Copy</button>
+          </li>
+          <li>
+            <span class="contact-kind">GitHub</span>
+            <a href="https://github.com/Dylan-Parisotto" target="_blank" rel="noopener">github.com/Dylan-Parisotto</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; <span id="year">2026</span> Dylan Parisotto</p>
+      <p>Built by hand with HTML, CSS and JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
